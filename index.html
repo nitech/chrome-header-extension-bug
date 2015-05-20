@@ -1,0 +1,98 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js fuelux" lang="no" ng-app="selfServiceApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Noe gikk galt - Self Service Terminal</title>
+    <link href="/selfservice/Content/css?v=x5iQS7vb8J7Bal4FhYxYcUB8OkMv6v8iUk925O3ndzs1" rel="stylesheet"/>
+
+</head>
+
+<body class="sst">
+    <input type="hidden" name="action" id="action" value="Error" />
+    <input type="hidden" name="controller" id="controller" value="System" />
+    <input type="hidden" name="baseUrl" id="baseUrl" value="http://demoisi/selfservice/" />
+    <input type="hidden" name="currentCulture" id="currentCulture" value="no" />
+    <input type="hidden" name="SelfServiceTerminalType" id="SelfServiceTerminalType" value="SelfServiceTerminal" />
+    <input type="hidden" name="SelfServiceControllerMode" id="SelfServiceControllerMode" value="DriveOut" />
+    <input type="hidden" name="TerminalIdentifier" id="TerminalIdentifier" value="Vekt2-Oppe" />
+
+
+<!-- Manual Control Terminal menu bar, only exposed to MCTs -->
+<!-- Disabled SP 15.04.2015 -->
+    
+
+    <!-- BEGIN CONTAINER -->
+    
+
+
+
+<div class="wrapper bare-theme bare-error" data-module="SystemError">
+
+    <header>
+        <h2 class="hint">
+            <span class="text"><span class="fa fa-phone"></span>Trykk p&#229; hjelp-knappen for &#229; snakke med en av oss</span>
+            <img class="arrow" src="/selfservice/Content/images/Icons/arrow-right.svg" />
+        </h2>
+    </header>
+    <div class="row system-message error">
+        <img src="/selfservice/Content/images/Icons/Error.svg" />
+        <h1>Noe gikk galt</h1>
+    </div>
+    <footer class="margin-0">&#160;</footer>
+
+</div>
+
+
+
+
+    <footer class="weight-status" ng-controller="TerminalStatusController">
+        <div class="weight-container"><span class="flaticon-weight6"></span> <span class="weight"></span> kg</div>
+    </footer>
+
+    <section id="debugWindow" class="debug-window sidebar">
+        <div class="list-group">
+            <div class="list-group-item list-group-item-heading">
+                <span class="fa fa-bug"></span> Debug Window
+            </div>
+            <div class="list-group-item">
+                <span class="fa fa-bolt"></span> Terminal ID: Vekt2-Oppe
+            </div>
+            <div class="list-group-item">
+                <input type="checkbox" name="setRedirectOnWrongCurrentUrl" id="setRedirectOnWrongCurrentUrl" /> <label for="setRedirectOnWrongCurrentUrl">setRedirectOnWrongCurrentUrl</label>
+            </div>
+            <div class="list-group-item">
+                <input type="checkbox" name="setRedirectOnNewState" id="setRedirectOnNewState" /> <label for="setRedirectOnNewState">setRedirectOnNewState</label>
+            </div>
+            <div class="list-group-item">
+                <input type="checkbox" name="setLogToConsole" id="setLogToConsole"/> <label for="setLogToConsole">Log to console</label>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    <!-- Will contain on-screen virtual keyboard once jQuery is initialized -->
+    <section id="virtualKeyboard"></section>
+
+    <!-- which locale we are using -->
+    <script type="text/javascript">
+        var locale = 'no';
+    </script>
+
+    <!-- END CONTAINER -->
+    <script src="/selfservice/bundles/jquery?v=XZ_futQAumWWWkwx_aRd6J1QOgBpL3SV-ZWjwrZBEfM1"></script>
+
+    <script src="/selfservice/bundles/bootstrap?v=a0JlrK3HWJYO4CANWtnjZQ6r-FHTgFewh3ItuNGmfr41"></script>
+
+    
+
+    <script src="/selfservice/Content/bower_components/jquery-timeago/locales/jquery.timeago.no.js" type="text/javascript"></script>
+    <script src="/selfservice/signalr/hubs" type="text/javascript"></script>
+</body>
+</html>
